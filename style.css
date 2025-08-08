@@ -1,0 +1,165 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #f8f8f8;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+header .logo img {
+  height: 60px;
+  object-fit: contain;
+  position: fix;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d50000;
+}
+
+/* Section Headings */
+section h1,
+section h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Carousel */
+.mySlides {
+  display: none;
+  border-radius: 8px;
+}
+
+.w3-display-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.w3-display-left,
+.w3-display-right {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Contact Section */
+#contact input[type="text"] {
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact button {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#contact button:hover {
+  background-color: #d50000;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.porches {
+  background-color: white;
+}
+
+.carmascard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.carcard {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 30px;
+  text-align: center;
+}
+
+.carcard:hover {
+  transform: translateY(-10px);
+}
+
+.carcard img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.carcard h3 {
+  margin-bottom: 15px;
+}
+
+.carcard p {
+  color: var(--light-text);
+  margin-bottom: 20px;
+}
+
+.btn login a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/021/493/946/small/abstract-empty-concrete-room-with-led-illumination-free-vector.jpg);
+}
+
+.right {
+  float: left;
+  width: 50px;
+}
+
+.left {
+  width: 400px;
+  margin-right: 100px;
+}
+
+.left p {
+  color: aliceblue;
+}
