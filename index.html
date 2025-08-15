@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://pngimg.com/uploads/porsche_logo/small/porsche_logo_PNG1.png" />
     <title>Porsche Website</title>
   </head>
   <body>
     <header>
       <div class="logo">
         <img
-          src="https://toppng.com/uploads/preview/porsche-logo-svg-115738504036g08zfigne.png"
+          src="img/por9.png"
           alt="Porsche Logo"
           style="width: 140px; height: 80px"
         />
@@ -20,9 +19,8 @@
         <ul>
           <li><a href="#trangchu">Trang chủ</a></li>
           <li><a href="#porches">Các loại xe</a></li>
-          <li><a href="#suvcar">Xe SUV</a></li>
-          <li><a href="#contact">Lien hệ</a></li>
-          <li><a href="#about">Về chúng tôi</a></li>
+          <li><a href="#about-porches">Về chúng tôi</a></li>
+          <button class="login-btn"><a href="login.html">Login</a></button>
         </ul>
       </nav>
     </header>
@@ -30,74 +28,167 @@
     <main>
       <section id="trangchu">
         
-        <h1>
-          "Experience the legacy of speed, design, and innovation — welcome to
-          the world of Porsche."
-        </h1>
-
         
+
+        <video src="por1.mp4" autoplay muted loop></video>
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Experience the Thrill</h2>
+            <h3>Porsche Performance</h3>
+            <p>The Porsche legacy combines timeless design with cutting-edge engineering. 
+               Feel the power, precision, and passion that defines every model.</p>
+            <a href="#about-porsche">Explore Models</a>
+        </div>
       </section>
 
-      <section id="suvcar">
+      <section id="about-porsche" class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        
+        <img src="https://www.topgear.com/sites/default/files/cars-car/image/2025/01/1-Porsche-911-GTS-review.jpg" alt="Porsche Car">
+      </div>
+      <div class="about-text">
+        <h1>Về Porsche</h1>
+        <p>
+          Porsche là thương hiệu xe thể thao hạng sang đến từ Stuttgart, Đức, được thành lập vào năm 1931 bởi Ferdinand Porsche. 
+          Hãng nổi tiếng toàn cầu với các mẫu xe mang hiệu suất vượt trội, thiết kế mang tính biểu tượng và công nghệ tiên tiến.
+        </p>
+        <h3>Lịch sử</h3>
+        <p>
+          Chiếc Porsche 356 ra mắt năm 1948 đã mở đầu cho huyền thoại, tiếp theo là dòng 911 (1963) trở thành biểu tượng thể thao trên toàn thế giới.
+          Trải qua nhiều thập kỷ, Porsche vẫn duy trì sự kết hợp hoàn hảo giữa truyền thống và đổi mới.
+        </p>
+        <h3>Giá trị cốt lõi</h3>
+        <ul>
+          <li>Hiệu suất và tốc độ đỉnh cao</li>
+          <li>Thiết kế tinh xảo, giàu cảm xúc</li>
+          <li>Đổi mới công nghệ bền vững</li>
+        </ul>
+        <h3>Thành tựu nổi bật</h3>
+        <p>
+          Porsche đã giành hơn 30.000 chiến thắng trong các giải đua quốc tế, bao gồm 24 Hours of Le Mans, khẳng định vị thế dẫn đầu trong ngành xe thể thao.
+        </p>
+        <a href="https://www.porsche.com" class="btn">Tìm hiểu thêm</a>
+      </div>
+    </div>
+      
+      
+            <section id="porches" class="porches">
         <div class="container">
-          
-
-          <div class="left">
-            <h2>Porsche SUV Car</h2>
-            <p>
-              Porsche Cayenne là SUV hạng sang hiệu suất cao, thiết kế mạnh mẽ, công nghệ hiện đại. Xe có nhiều tùy chọn động cơ V6 và V8 tăng áp, công suất 335–640 mã lực, tăng tốc 0–100 km/h từ 3,3 giây. Hộp số tự động 8 cấp, dẫn động 4 bánh. Nội thất sang trọng, màn hình cảm ứng lớn, hỗ trợ Apple CarPlay/Android Auto, âm thanh Bose/Burmester, cùng nhiều tính năng an toàn tiên tiến.
-            </p>
-            <a href="#">Quay</a>
-          </div>
-
-          <div class="right">
-            <img style="width: 800px;" src="img/por8.avif"/>
-          </div>
-        
-
-      </section>
-
-
-
-      <section id="porches" class="porches">
-        <div class="carmascard">
           <h2>Các loại xe phổ biến của Porsche</h2>
-          <p class="2ndtitle">Khám phá các loại xe yêu thích của bạn</p>
+          <p class="section-subtitle">
+            Khám phá các loại xe yêu thích của bạn
+          </p>
 
-          <div class="carmascard">
-            <div class="carcard">
+          <div class="porches-grid">
+            <div class="porches-card">
               <img src="img/por5.jpg" alt="Porsche Cayenne" />
               <h3>Porsche Cayenne</h3>
               <p>
                 Đây là mẫu SUV đầu tiên của Porsche, kết hợp được sự sang trọng,
                 tiện nghi và khả năng vận hành thể thao.
               </p>
-              <a href="#" class="btn-outline">Xem thêm</a>
+              <a href="#cayenne" class="btn-outline">Xem thêm</a>
             </div>
 
-            <div class="carcard">
+            <div class="porches-card">
               <img src="img/por6.jpg" alt="Porsche Macan" />
               <h3>Porsche Macan</h3>
               <p>
-                SUV cỡ nhỏ, giá "mềm" hơn Cayenne, chiếm doanh số cao nhất toàn
-                cầu.
+                SUV cỡ nhỏ, giá "mềm" hơn Cayenne, chiếm doanh số cao nhất toàn cầu.
               </p>
-              <a href="#" class="btn-outline">Xem thêm</a>
+              <a href="#macan" class="btn-outline">Xem thêm</a>
             </div>
 
-            <div class="carcard">
+            <div class="porches-card">
               <img src="img/por7.jpg" alt="Porsche Taycan" />
               <h3>Porsche Taycan</h3>
               <p>
-                Siêu xe điện bốn cửa, tăng tốc ngang ngửa siêu xe nhưng vẫn tiện
-                nghi như sedan.
+                Siêu xe điện bốn cửa, tăng tốc ngang ngửa siêu xe nhưng vẫn tiện nghi như sedan.
               </p>
-              <a href="#" class="btn-outline">Xem thêm</a>
+              <a href="#taycan" class="btn-outline">Xem thêm</a>
             </div>
           </div>
         </div>
       </section>
 
+      
+
+
+
+        <section id="cayenne">
+          <div class="car-container">
+            <img src="img/por10.jpg" alt="Porsche Cayenne" class="car-image" style="width: 1200px; height: 510px;">
+            <div class="overlay">
+              <h1 class="car-name">Cayenne</h1>
+              <div class="specs">
+                <div class="spec">
+                  <p class="value">5.560.000.000 VND*</p>
+                  <p class="label">Giá tiêu chuẩn</p>
+                </div>
+                <div class="spec">
+                  <p class="value">353 PS (260 kW)</p>
+                  <p class="label">Công suất</p>
+                </div>
+                <div class="spec">
+                  <p class="value">6,0 giây (5,7 giây với gói Sport Chrono)</p>
+                  <p class="label">Tăng tốc từ 0 – 100 km/giờ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      <section id="macan">
+        <div class="car-container">
+          <img src="img/pors1.jpg" alt="Porsche Macan" class="car-image" style="width: 1200px; height: 510px;">
+          <div class="overlay">
+            <h1 class="car-name">Macan</h1>
+            <div class="specs">
+              <div class="spec">
+                <p class="value">3.200.000.000 VND*</p>
+                <p class="label">Giá tiêu chuẩn</p>
+              </div>
+              <div class="spec">
+                <p class="value">265 PS (195 kW)</p>
+                <p class="label">Công suất</p>
+              </div>
+              <div class="spec">
+                <p class="value">6,4 giây</p>
+                <p class="label">Tăng tốc từ 0 – 100 km/giờ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="taycan">
+        <div class="car-container">
+          <img src="img/pors2.jpg" alt="Porsche Taycan" class="car-image" style="width: 1200px; height: 510px;">
+          <div class="overlay">
+            <h1 class="car-name">Taycan</h1>
+            <div class="specs">
+              <div class="spec">
+                <p class="value">4.760.000.000 VND*</p>
+                <p class="label">Giá tiêu chuẩn</p>
+              </div>
+              <div class="spec">
+                <p class="value">408 PS (300 kW)</p>
+                <p class="label">Công suất</p>
+              </div>
+              <div class="spec">
+                <p class="value">5,4 giây</p>
+                <p class="label">Tăng tốc từ 0 – 100 km/giờ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        
       <section id="contact">
         <div
           class="w3-container w3-content w3-padding-64"
