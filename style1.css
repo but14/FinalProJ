@@ -68,19 +68,11 @@ input::placeholder {
   font-size: 20px;
 }
 
-.button2 a{
-  background-color:#008cba;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+.button2 a {
+  color: black;
   text-decoration: none;
 }
 
-
-.button2:hover a{
+.button2:hover a {
   background-color: white;
 }
-
-
