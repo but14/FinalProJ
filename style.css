@@ -1,10 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
-  box-sizing: border-box;
+  padding-top: 85px;
+  background-color: #d8d8d7;
   color: #000;
-  background-color: #fff;
 }
 
 /* Header */
@@ -15,13 +21,16 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
-  position: fix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 header .logo img {
   height: 60px;
   object-fit: contain;
-
 }
 
 nav ul {
@@ -47,7 +56,34 @@ nav ul li a:hover {
   color: #d50000;
 }
 
+.login-btn {
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  background-color: #b4a7a7;
+  
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  background-color: #0056b3;
+}
+
 /* Section Headings */
+section {
+  margin-bottom: 50px;
+}
+
 section h1,
 section h2 {
   font-weight: bold;
@@ -55,364 +91,92 @@ section h2 {
   color: #111;
 }
 
-
-/* Contact Section */
-#contact input[type="text"] {
-  padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  
-}
-
-#contact button {
-  background-color: #000;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-#contact button:hover {
-  background-color: #d50000;
-  
-}
-
-
-
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-
-
-.porches {
-  background-color: var(--bg-light);
-}
-
-.porches-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.porches-card {
-  background-color: var(--white);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 30px;
-  text-align: center;
-}
-
-.porches-card:hover {
-  transform: translateY(-10px);
-}
-
-.porches-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-.porches-card h3 {
-  margin-bottom: 15px;
-  color: #000;
-}
-
-.porches-card p {
-
-  margin-bottom: 20px;
-  color: #000;
-}
-
-
-/* Button style */
-.porches .btn-outline {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #007bff;
-  color: #007bff;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.porches .btn-outline:hover {
-  background: #007bff;
-  color: #fff;
-}
-
-/* Hover effect */
-.porches .carcard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-
-
-
-
-
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #000;
- 
-}
-
-#cayenne .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#cayenne .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#cayenne .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-  
-}
-
-#cayenne .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-}
-
-#cayenne .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-#cayenne .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#cayenne .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-
-#taycan .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#taycan .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#taycan .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-}
-
-#taycan .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-
-}
-
-
-#taycan .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-#taycan .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#taycan .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#macan .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#macan .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#macan .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-}
-
-#macan .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-}
-
-#macan .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-
-
-#macan .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#macan .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Showcase Section */
 .showcase {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .showcase video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 100vw;
+  height: auto;
+  max-height: 100vh;
 }
 
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
 
 .text {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 2;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .text h2 {
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 .text h3 {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    color: #f4f4f4;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-
 .text p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 20px;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .text a {
-    display: inline-block;
-    text-decoration: none;
-    background: #fff;
-    color: #000;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border-radius: 4px;
-
+  display: inline-block;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
 }
 
 .text a:hover {
-    background: #f4f4f4;
+  background: #f4f4f4;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  /* background-color: #111; */
-  color: #000000;
-}
-
+/* About Section */
 .about-section {
   padding: 50px 20px;
-  /* background-color: #111; */
 }
 
 .about-container {
@@ -451,7 +215,7 @@ body {
   color: #d5001c;
 }
 
-.about-text p, 
+.about-text p,
 .about-text ul {
   font-size: 1rem;
   line-height: 1.6;
@@ -477,37 +241,471 @@ body {
   background-color: #a30016;
 }
 
-@media (max-width: 768px) {
+/* Porches Section */
+.porches {
+  background-color: var(--bg-light);
+}
+
+.porches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.porches-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 30px;
+  text-align: center;
+}
+
+.porches-card:hover {
+  transform: translateY(-10px);
+}
+
+.porches-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.porches-card h3 {
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.porches-card p {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.porches .btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.porches .btn-outline:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.porches .carcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Car Models Sections */
+/* Cayenne */
+#cayenne .car-container,
+#taycan .car-container,
+#macan .car-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#cayenne .car-image,
+#taycan .car-image,
+#macan .car-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#cayenne .overlay,
+#taycan .overlay,
+#macan .overlay {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  color: rgb(255, 255, 255);
+}
+
+#cayenne .car-name,
+#taycan .car-name,
+#macan .car-name {
+  font-size: 60px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  text-shadow: 3px 3px 10px white;
+}
+
+#cayenne .specs,
+#taycan .specs,
+#macan .specs {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-shadow: 3px 3px 10px black;
+}
+
+#cayenne .spec .value,
+#taycan .spec .value,
+#macan .spec .value {
+  font-size: 25px;
+  margin: 0;
+  text-shadow: 3px 3px 10px black;
+}
+
+#cayenne .spec .label,
+#taycan .spec .label,
+#macan .spec .label {
+  font-size: 17px;
+  opacity: 0.8;
+  margin: 5px 0 0;
+  text-shadow: 3px 3px 10px black;
+}
+
+/* Contact Form */
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #adadad;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.row.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.submit-btn {
+  float: right;
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: #4b8cfb;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  header .logo img {
+    width: 100px;
+    height: 60px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .login-btn {
+    margin-top: 10px;
+  }
+
+  main section,
+  .container,
+  .about-container {
+    padding: 10px;
+  }
+
+  .porches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .car-container img.car-image {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+  }
+
   .about-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .about-text {
-    padding: 10px;
+    width: 100%;
+  }
+
+  .row.input-container {
+    flex-direction: column;
+  }
+
+  .styled-input,
+  .styled-input.wide {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .text h2 {
+    font-size: 3rem;
+  }
+
+  .text h3 {
+    font-size: 1.5rem;
   }
 }
 
-section {
-  margin-bottom: 50px; 
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    background: #f8f8f8;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+
+  .styled-input {
+    width: 100%;
+  }
+
+  .porches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  #cayenne .car-name,
+  #taycan .car-name,
+  #macan .car-name {
+    font-size: 40px;
+  }
+
+  #cayenne .spec .value,
+  #taycan .spec .value,
+  #macan .spec .value {
+    font-size: 20px;
+  }
 }
 
-.login-btn {
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
+@media (max-width: 600px) {
+  body {
+    padding-top: 80px;
+  }
+
+  header {
+    padding: 5px 10px;
+  }
+
+  header .logo img {
+    width: 70px;
+    height: 40px;
+  }
+
+  .text h2 {
+    font-size: 2rem;
+  }
+
+  .text h3 {
+    font-size: 1.2rem;
+  }
+
+  .porches-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  #cayenne .overlay,
+  #taycan .overlay,
+  #macan .overlay {
+    padding: 10px;
+    bottom: 20px;
+    left: 15px;
+  }
+
+  #cayenne .car-name,
+  #taycan .car-name,
+  #macan .car-name {
+    font-size: 30px;
+  }
+
+  #cayenne .specs,
+  #taycan .specs,
+  #macan .specs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .showcase {
+    height: 60vh;
+  }
+
+  .showcase video {
+    max-height: 60vh;
+  }
 }
 
-.login-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-  color: #007bff;
+/* Fix for small mobile devices */
+@media (max-width: 400px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text h3 {
+    font-size: 1rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  #cayenne .car-name,
+  #taycan .car-name,
+  #macan .car-name {
+    font-size: 24px;
+  }
+
+  #cayenne .spec .value,
+  #taycan .spec .value,
+  #macan .spec .value {
+    font-size: 16px;
+  }
+
+  #cayenne .spec .label,
+  #taycan .spec .label,
+  #macan .spec .label {
+    font-size: 14px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.2rem;
+  }
 }
