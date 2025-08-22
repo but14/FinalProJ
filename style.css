@@ -5,59 +5,60 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --primary-color: #d5001c;
+  --secondary-color: #000;
+  --accent-color: #007bff;
+  --light-bg: #f8f8f8;
+  --dark-bg: #2d2d2d;
+  --white: #fff;
+  --gray: #ccc;
+  --dark-gray: #999;
+  --header-height: 80px;
+}
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
-  padding-top: 85px;
+  padding-top: var(--header-height);
   background-color: #d8d8d7;
   color: #000;
 }
 
 /* Header */
 header {
-  background-color: #f8f8f8;
+  background-color: var(--light-bg);
   padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-<<<<<<< HEAD
+  border-bottom: 1px solid var(--gray);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-=======
-  position: fixe;
->>>>>>> ddb28043d4e7e6d7fd747c3ad64b6bac84a35598
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 30px;
 }
 
 header .logo img {
   height: 60px;
+  width: auto;
   object-fit: contain;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background: #f8f8f8;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    display: none;
-  }
-} 
-
-/* nav ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 20px;
-} */
+}
 
 nav ul li {
   display: inline;
@@ -71,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #d50000;
+  color: var(--primary-color);
 }
 
 .login-btn {
@@ -86,426 +87,46 @@ nav ul li a:hover {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  background-color: #b4a7a7;
-  
+  background-color: var(--accent-color);
+  display: inline-block;
 }
 
 .login-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-  color: #fff;
   background-color: #0056b3;
 }
 
-/* Section Headings */
-section {
-  margin-bottom: 50px;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
 }
 
-section h1,
-section h2 {
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-<<<<<<< HEAD
-/* Showcase Section */
-=======
-
-body {
-    background-color: #d8d8d7;
-    padding-top: 85px;
-}
-
-/* h1 {
-    font-family: 'Poppins', sans-serif, 'arial';
-    font-weight: 600;
-    font-size: 72px;
-    color: white;
-    text-align: center;
-}
-
-h4 {
-    font-family: 'Roboto', sans-serif, 'arial';
-    font-weight: 400;
-    font-size: 20px;
-    color: #9b9b9b;
-    line-height: 1.5;
-} */
-
-
-
-
-input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-    font-size: 0.75em;
-    color: #adadad;
-    top: -5px;
-    -webkit-transition: all 0.225s ease;
-    transition: all 0.225s ease;
-}
-
-.styled-input {
-    float: left;
-    width: 293px;
-    margin: 1rem 0;
-    position: relative;
-    border-radius: 4px;
-}
-
-@media only screen and (max-width: 768px){
-    .styled-input {
-        width:100%;
-    }
-}
-
-.styled-input label {
-    color: #999;
-    padding: 1.3rem 30px 1rem 30px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    pointer-events: none;
-}
-
-.styled-input.wide { 
-    width: 650px;
-    max-width: 100%;
-}
-
-input,
-textarea {
-    padding: 30px;
-    border: 0;
-    width: 100%;
-    font-size: 1rem;
-    background-color: #2d2d2d;
-    color: white;
-    border-radius: 4px;
-}
-
-input:focus,
-textarea:focus { outline: 0; }
-
-input:focus ~ span,
-textarea:focus ~ span {
-    width: 100%;
-    -webkit-transition: all 0.075s ease;
-    transition: all 0.075s ease;
-}
-
-textarea {
-    width: 100%;
-    min-height: 15em;
-}
-
-.input-container {
-    width: 650px;
-    max-width: 100%;
-    margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-    float: right;
-    padding: 7px 35px;
-    border-radius: 60px;
-    display: inline-block;
-    background-color: #4b8cfb;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
-              0 2px 10px 0 rgba(0,0,0,0.07);
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-
-.submit-btn:hover {
-    transform: translateY(1px);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
-              0 1px 1px 0 rgba(0,0,0,0.09);
-}
-
-@media (max-width: 768px) {
-    .submit-btn {
-        width:100%;
-        float: none;
-        text-align:center;
-    }
-}
-
-
-@media (max-width: 768px) {
-  .submit-btn {
-    width: 100%;
-    text-align: center;
-    float: none;
-  }
-}
-
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-} 
-
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
-}
-
-
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-
-
-.porches {
-  background-color: var(--bg-light);
-}
-
-.porches-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.porches-card {
-  background-color: var(--white);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 30px;
-  text-align: center;
-}
-
-.porches-card:hover {
-  transform: translateY(-10px);
-}
-
-.porches-card img {
+.menu-toggle span {
+  display: block;
+  height: 3px;
   width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-.porches-card h3 {
-  margin-bottom: 15px;
-  color: #000;
-}
-
-.porches-card p {
-
-  margin-bottom: 20px;
-  color: #000;
-}
-
-
-/* Button style */
-.porches .btn-outline {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #007bff;
-  color: #007bff;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
+  background-color: #333;
   transition: all 0.3s ease;
 }
 
-.porches .btn-outline:hover {
-  background: #007bff;
-  color: #fff;
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
 
-/* Hover effect */
-.porches .carcard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
 }
 
-
-
-
-
-
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #000;
- 
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
-#cayenne .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#cayenne .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#cayenne .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-  
-}
-
-#cayenne .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-}
-
-#cayenne .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-#cayenne .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#cayenne .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-
-#taycan .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#taycan .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#taycan .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-}
-
-#taycan .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-
-}
-
-
-#taycan .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-#taycan .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#taycan .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#macan .car-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#macan .car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#macan .overlay {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
-  color: rgb(255, 255, 255);
-}
-
-#macan .car-name {
-  font-size: 60px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-shadow: 3px 3px 10px white;
-}
-
-#macan .specs {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black
-}
-
-
-
-#macan .spec .value {
-  font-size: 25px;
-  margin: 0;
-  text-shadow: 3px 3px 10px black
-}
-
-#macan .spec .label {
-  font-size: 17px;
-  opacity: 0.8;
-  margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black
-}
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
->>>>>>> ddb28043d4e7e6d7fd747c3ad64b6bac84a35598
+/* Showcase Section */
 .showcase {
   position: relative;
   height: 100vh;
@@ -582,10 +203,13 @@ body {
   padding: 10px 25px;
   font-size: 1rem;
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .text a:hover {
   background: #f4f4f4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
@@ -610,6 +234,8 @@ body {
 .about-image img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -617,8 +243,8 @@ body {
   padding: 20px;
 }
 
-.about-text h2 {
-  font-size: 2rem;
+.about-text h1 {
+  font-size: 2.5rem;
   margin-bottom: 15px;
   color: #000000;
 }
@@ -626,7 +252,7 @@ body {
 .about-text h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #d5001c;
+  color: var(--primary-color);
 }
 
 .about-text p,
@@ -643,21 +269,39 @@ body {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #d5001c;
+  background-color: var(--primary-color);
   color: white;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
   background-color: #a30016;
+  transform: translateY(-2px);
 }
 
 /* Porches Section */
 .porches {
-  background-color: var(--bg-light);
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.porches h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .porches-grid {
@@ -701,8 +345,8 @@ body {
 .porches .btn-outline {
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid #007bff;
-  color: #007bff;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
@@ -710,32 +354,36 @@ body {
 }
 
 .porches .btn-outline:hover {
-  background: #007bff;
+  background: var(--accent-color);
   color: #fff;
 }
 
-.porches .carcard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Car Models Sections */
+#cayenne,
+#taycan,
+#macan {
+  margin: 50px 0;
 }
 
-/* Car Models Sections */
-/* Cayenne */
-#cayenne .car-container,
-#taycan .car-container,
-#macan .car-container {
+.car-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#cayenne .car-image,
-#taycan .car-image,
-#macan .car-image {
+.car-image {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.car-container:hover .car-image {
+  transform: scale(1.05);
 }
 
 #cayenne .overlay,
@@ -745,44 +393,55 @@ body {
   bottom: 50px;
   left: 30px;
   color: rgb(255, 255, 255);
+  z-index: 2;
 }
 
-#cayenne .car-name,
-#taycan .car-name,
-#macan .car-name {
+.car-name {
   font-size: 60px;
   margin: 0 0 10px;
   font-weight: 400;
-  text-shadow: 3px 3px 10px white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
-#cayenne .specs,
-#taycan .specs,
-#macan .specs {
+.specs {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  text-shadow: 3px 3px 10px black;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
-#cayenne .spec .value,
-#taycan .spec .value,
-#macan .spec .value {
+.spec .value {
   font-size: 25px;
   margin: 0;
-  text-shadow: 3px 3px 10px black;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
-#cayenne .spec .label,
-#taycan .spec .label,
-#macan .spec .label {
+.spec .label {
   font-size: 17px;
   opacity: 0.8;
   margin: 5px 0 0;
-  text-shadow: 3px 3px 10px black;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 /* Contact Form */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.contact-section h4 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
 .styled-input {
   float: left;
   width: 293px;
@@ -792,12 +451,11 @@ body {
 }
 
 .styled-input label {
-  color: #999;
+  color: var(--dark-gray);
   padding: 1.3rem 30px 1rem 30px;
   position: absolute;
   top: 10px;
   left: 0;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   pointer-events: none;
 }
@@ -813,7 +471,7 @@ textarea {
   border: 0;
   width: 100%;
   font-size: 1rem;
-  background-color: #2d2d2d;
+  background-color: var(--dark-bg);
   color: white;
   border-radius: 4px;
 }
@@ -826,7 +484,6 @@ textarea:focus {
 input:focus ~ span,
 textarea:focus ~ span {
   width: 100%;
-  -webkit-transition: all 0.075s ease;
   transition: all 0.075s ease;
 }
 
@@ -837,7 +494,6 @@ textarea:valid ~ label {
   font-size: 0.75em;
   color: #adadad;
   top: -5px;
-  -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
 }
 
@@ -860,36 +516,27 @@ textarea {
 
 .submit-btn {
   float: right;
-  padding: 7px 35px;
+  padding: 12px 35px;
   border-radius: 60px;
   display: inline-block;
-  background-color: #4b8cfb;
+  background-color: var(--accent-color);
   color: white;
   font-size: 18px;
   cursor: pointer;
+  border: none;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .submit-btn:hover {
-  transform: translateY(1px);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
-}
-
-input[type="checkbox"] + label {
-  color: #ccc;
-  font-style: italic;
-}
-
-input[type="checkbox"]:checked + label {
-  color: #f00;
-  font-style: normal;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-  background-color: #000;
+  background-color: var(--secondary-color);
   color: white;
   text-align: center;
   padding: 20px;
@@ -898,67 +545,32 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 900px) {
+  :root {
+    --header-height: 70px;
+  }
+
   header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 10px 20px;
   }
 
   header .logo img {
-    width: 100px;
-    height: 60px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
+    height: 50px;
   }
 
   .login-btn {
-    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 
   main section,
   .container,
   .about-container {
-    padding: 10px;
+    padding: 30px 15px;
   }
 
   .porches-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-
-  .car-container img.car-image {
-    width: 100%;
-    height: auto;
-    max-width: 100vw;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .about-text {
-    width: 100%;
-  }
-
-  .row.input-container {
-    flex-direction: column;
-  }
-
-  .styled-input,
-  .styled-input.wide {
-    width: 100%;
-    margin-bottom: 15px;
   }
 
   .text h2 {
@@ -968,35 +580,80 @@ footer {
   .text h3 {
     font-size: 1.5rem;
   }
+
+  .car-name {
+    font-size: 45px;
+  }
+
+  .spec .value {
+    font-size: 20px;
+  }
 }
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
+  :root {
+    --header-height: 120px;
+  }
+
   body {
-    padding-top: 120px;
+    padding-top: var(--header-height);
   }
 
   header {
+    flex-wrap: wrap;
     padding: 10px 15px;
   }
 
+  .menu-toggle {
+    display: flex;
+    order: 3;
+  }
+
+  header .logo {
+    order: 1;
+  }
+
+  .login-btn {
+    order: 2;
+  }
+
+  nav {
+    order: 4;
+    width: 100%;
+  }
+
   nav ul {
-    background: #f8f8f8;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
+    flex-direction: column;
+    background: var(--light-bg);
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     display: none;
-  }
-
-  .styled-input {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
     width: 100%;
+    z-index: 1000;
   }
 
   .porches-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .row.input-container {
+    flex-direction: column;
+  }
+
+  .styled-input,
+  .styled-input.wide {
+    width: 100%;
   }
 
   .submit-btn {
@@ -1005,38 +662,25 @@ footer {
     text-align: center;
   }
 
-  #cayenne .car-name,
-  #taycan .car-name,
-  #macan .car-name {
-    font-size: 40px;
+  .car-name {
+    font-size: 36px;
   }
 
-  #cayenne .spec .value,
-  #taycan .spec .value,
-  #macan .spec .value {
-    font-size: 20px;
+  .specs {
+    gap: 20px;
   }
-=======
 
-
-
-
-section {
-  margin-bottom: 50px; 
->>>>>>> ddb28043d4e7e6d7fd747c3ad64b6bac84a35598
+  .showcase {
+    height: 70vh;
+  }
 }
 
 @media (max-width: 600px) {
-  body {
-    padding-top: 80px;
-  }
-
-  header {
-    padding: 5px 10px;
+  :root {
+    --header-height: 100px;
   }
 
   header .logo img {
-    width: 70px;
     height: 40px;
   }
 
@@ -1048,50 +692,50 @@ section {
     font-size: 1.2rem;
   }
 
-  .porches-card img {
-    width: 100%;
-    height: auto;
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  .car-name {
+    font-size: 28px;
+  }
+
+  .specs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spec .value {
+    font-size: 18px;
+  }
+
+  .spec .label {
+    font-size: 14px;
   }
 
   #cayenne .overlay,
   #taycan .overlay,
   #macan .overlay {
-    padding: 10px;
     bottom: 20px;
     left: 15px;
   }
 
-  #cayenne .car-name,
-  #taycan .car-name,
-  #macan .car-name {
-    font-size: 30px;
+  .about-text h1 {
+    font-size: 2rem;
   }
 
-  #cayenne .specs,
-  #taycan .specs,
-  #macan .specs {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  footer {
-    font-size: 0.9em;
-    padding: 10px;
+  .about-text h3 {
+    font-size: 1.3rem;
   }
 
   .showcase {
     height: 60vh;
   }
-
-  .showcase video {
-    max-height: 60vh;
-  }
 }
 
-/* Fix for small mobile devices */
 @media (max-width: 400px) {
-  body {
-    padding-top: 70px;
+  :root {
+    --header-height: 90px;
   }
 
   .text h2 {
@@ -1102,35 +746,19 @@ section {
     font-size: 1rem;
   }
 
-  .text p {
-    font-size: 0.9rem;
-  }
-
-  #cayenne .car-name,
-  #taycan .car-name,
-  #macan .car-name {
+  .car-name {
     font-size: 24px;
   }
 
-  #cayenne .spec .value,
-  #taycan .spec .value,
-  #macan .spec .value {
+  .spec .value {
     font-size: 16px;
   }
 
-  #cayenne .spec .label,
-  #taycan .spec .label,
-  #macan .spec .label {
-    font-size: 14px;
+  .spec .label {
+    font-size: 12px;
   }
 
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-text h3 {
-    font-size: 1.2rem;
+  .showcase {
+    height: 50vh;
   }
 }
-
-
